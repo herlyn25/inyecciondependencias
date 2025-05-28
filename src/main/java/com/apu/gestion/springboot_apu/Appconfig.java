@@ -1,0 +1,23 @@
+package com.apu.gestion.springboot_apu;
+
+import java.util.Arrays;
+import java.util.List;
+
+import org.springframework.context.annotation.*;
+
+import com.apu.gestion.springboot_apu.models.Item;
+import com.apu.gestion.springboot_apu.models.Product;
+
+
+@Configuration
+@PropertySource(value = "classpath:data.properties")
+public class Appconfig {
+    
+    @Bean
+    List<Item> itemInvoice(){
+        Product p1= new Product("camara Sony", 800);
+        Product p2= new Product("Bici Alhua", 1800);
+        return Arrays.asList(new Item(p1, 2), new Item(p2, 4));       
+
+}
+}
