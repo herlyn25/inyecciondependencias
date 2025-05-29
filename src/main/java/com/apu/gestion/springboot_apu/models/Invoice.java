@@ -5,6 +5,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
+import jakarta.annotation.PostConstruct;
+
 @Component
 public class Invoice {
     @Autowired
@@ -15,6 +17,13 @@ public class Invoice {
     
     @Autowired
     private List<Item> items;
+
+    @PostConstruct
+    public void init(){
+        client.setName(client.getName().concat(" de Jesus"));
+        client.setLastname(client.getLastname().concat(" Castilla"));
+        description =  description.concat(" del cliente ").concat(client.getName()).concat(" ").concat(client.getLastname());
+    }
     
     public Client getClient() {
         return client;
