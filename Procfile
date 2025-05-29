@@ -1,0 +1,1 @@
+web: java -jar target/springboot-apu.jar

@@ -21,4 +21,7 @@ public class Item {
     public void setQuantity(Integer quantity) {
         this.quantity = quantity;
     }
+     public Integer getImporte(){
+        return quantity*product.getPrice();
+    }
 }

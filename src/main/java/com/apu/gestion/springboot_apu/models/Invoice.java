@@ -1,5 +1,4 @@
 package com.apu.gestion.springboot_apu.models;
-
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,7 +7,6 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Invoice {
-
     @Autowired
     private Client client;
     
@@ -35,5 +33,11 @@ public class Invoice {
     }
     public void setItems(List<Item> items) {
         this.items = items;
+    }
+    public int getTotal(){
+        int total= items.stream()
+        .map(item->item.getImporte())
+        .reduce(0, (sum,importe)->sum+importe);
+        return total;
     }
 }

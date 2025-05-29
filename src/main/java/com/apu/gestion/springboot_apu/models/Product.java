@@ -20,5 +20,6 @@ public class Product {
     }
     public void setPrice(Integer price) {
         this.price = price;
-    }    
+    } 
+      
 }
