@@ -1,0 +1,8 @@
+com\apu\gestion\springboot_apu\Appconfig$1.class
+com\apu\gestion\springboot_apu\models\Client.class
+com\apu\gestion\springboot_apu\models\Item.class
+com\apu\gestion\springboot_apu\SpringbootApuApplication.class
+com\apu\gestion\springboot_apu\controllers\InvoiceController.class
+com\apu\gestion\springboot_apu\models\Invoice.class
+com\apu\gestion\springboot_apu\models\Product.class
+com\apu\gestion\springboot_apu\Appconfig.class
